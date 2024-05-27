@@ -4,8 +4,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Git/ GitHub</title>
+<style>
+*{
+	font-family: -apple-system, Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neve', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+html, body{
+	position: relative;
+	background-color: #05928F;
+	width: 100vw;
+	height: 100vh;
+}
+main{
+	width: 90vw;
+	height: 90vh;
+}
+section#login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	width: 200px;
+	height: 470px;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px rgb(0,0,0,0.450);
+	overflow: hidden;
+	
+	transition: width .5s, height .5s;
+	transition-timing-function: ease;
+	transform: translate(-50%, -50%);
+}
+section#login > div#image{
+	display: block;
+	background: black url('../imagens/img.jpg') no-repeat center center;
+	height: 200px;
+	background-size: cover;
+}
+section#login > div#form{
+	display: block;
+	padding: 10px;
+}
+section#login > div#form > h1{
+	padding: 0px 0px 10px 0px;
+	text-align: center;
+}
+form > div.camp{
+	font-size: 1em;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #DB4F00;
+	border-radius: 8px;
+	margin: 10px 0px;
+}
+form > div.camp {
+    font-size: 1em;
+    width: 100%;
+    height: 30px;
+    border: 1.5px solid #DB4F00;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+div.camp > span{
+	font-size: 1.5em;
+	margin: 1.5px;
+}
+div.camp > input{
+	display: inline;
+	position: absolute;
+	width: 75%;
+	height: 25px;
+	border: none;
+	border-radius: 8px;
+	margin: 5px 0px;
+	transform: translateY(-3.5px);
+}
+div.camp > label{
+	display: none;
+	width: 100%;
+	height: 30px;
+}
+form > input[type=submit]{
+	display: block;
+	width: 100%;
+	height: 30px;
+	font-size: 1em;
+	background-color: #DB4F00;
+	color: white;
+	text-height: bolder;
+	border: none;
+	border-radius: 8px;
+}
+form > input[type=submit]:hover{
+	background-color: #0CC2B6;
+	color: white;
+	cursor: pointer;
+}
+form > a{
+	display: block;
+	font-size: 1em;
+	padding-top: 5px;
+	margin-top: 5px;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	background-color: white;
+	color: black;
+	border: 1px solid #DB4F00;
+	border-radius: 8px;
+	text-decoration: none;
+}
+form > a:hover{
+	background-color: #DB4F00;
+	color: white;
+	cursor: pointer;
+}
+  </style>
 </head>
 <body>
- 
+ <main>
+		<section id="login">
+			<div id="image">
+				<!–- Aqui vai uma imagem nas CSS -–>
+			</div>
+			<div id="form">
+				<h1>Login</h1>
+				<p>Bem-vindo(a). Faça seu login!</p>
+				<form action="login.js" method="post" autocomplete="on">
+					<div class="camp">
+						<input type="email" name="login" id="iemail" 
+							placeholder="seu email" autocomplete="email" 
+							required maxlength="50">
+						<label for="iemail">Email</label>
+					</div>
+					<div class="camp">
+						<input type="password" name="password" id="ipassword"
+							placeholder="sua senha" autocomplete="current-password"
+							required minlength="8" maxlength="20">
+						<label for="ipassword">Password</label>
+					</div>
+						<input type="submit" value="Entrar">
+						<a class="botao" href="esquci.html" target="_blank">
+						Esqueci minha senha
+						</a>
+				</form>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
